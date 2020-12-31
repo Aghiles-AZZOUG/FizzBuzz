@@ -1,0 +1,12 @@
+steges:
+  test
+
+test:
+  image: java:li
+  stage: test
+  script: 
+    ./gradlew test
+  artifact:
+    report:
+      junit: 
+        build/test-rests/test/*.xml
